@@ -4,12 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Name and Last Name Form</title>
+    <!-- reCAPTCHA Enterprise script -->
+    <script src="https://www.google.com/recaptcha/enterprise.js" async defer></script>
 </head>
 <body>
     <div>
         <h2>Enter Your Details</h2>
 
-        <form>
+        <form action="" method="POST">
             <div>
                 <label for="firstName">First Name:</label>
                 <input
@@ -31,6 +33,9 @@
                     required
                 >
             </div>
+
+            <!-- reCAPTCHA widget will appear here -->
+            <div class="g-recaptcha" data-sitekey="6LdzIpMrAAAAADzc6r87p77dQpD2tqV8Bo7CgDN7" data-action="LOGIN"></div>
 
             <div>
                 <button type="submit">
