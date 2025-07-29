@@ -26,6 +26,11 @@ app.use(bodyParser.json());
 // Render.com will inject this variable into your running service.
 const RECAPTCHA_SECRET_KEY = process.env.RECAPTCHA_SECRET_KEY;
 
+// Define a simple GET route for the root path to confirm the server is running
+app.get('/', (req, res) => {
+    res.status(200).send('Backend service is running. Use POST to /submit-form to interact with the form.');
+});
+
 // Define the API endpoint for form submission
 app.post('/submit-form', async (req, res) => {
     // Extract data from the request body
